@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--calling style.css-->
     <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- call external stylesheet-->
 
     <!--fonts from google-->
@@ -16,6 +17,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
+    <style>
+        a{
+            /* implement a different styling from style.css page*/
+
+        }
+    </style>
 
 
 </head>
@@ -23,13 +30,16 @@
     <header>
         <h1> Home Landing Page for JP Nacu</h1>
         <h1> CMPE 2000</h1>
-        <h3> Jan Paul Nacu</h3>
+        <h2> Some brief information about me: </h2>
+        <p> Hi my name is Jan Paul Nacu and I am a current student in the Computer Engineering Technology program (CNT) at NAIT.
+            
+        </p> <!-- put info about me-->
 
     </header>
 <nav> <!--nav is section where it links to other pages -->
-    <a href="demos/index.html"><img src="images/Demos.jpg"></a>
-    <a href="icas/index.html"><img src="images/ICA.jpg"></a>
-    <a href="labs/index.html"><img src="images/Lab.jpg"></a>
+    <a href="demos/index.html"><img src="images/Demos.jpg" class="Centered" alt="Demos"></a>
+    <a href="icas/index.html"><img src="images/ICA.jpg" class="Centered" alt="ICAs"></a>
+    <a href="labs/index.html" id="ALast"><img src="images/Lab.jpg" class="Centered" alt="Labs"></a>
     
     
 </nav>    

@@ -1,9 +1,43 @@
 
 
 body{
-    background-color: aquamarine;
-        
-  
+    background-color: aquamarine;        
+    font-family: Quantico; /* imported font */
    
-
 }
+
+a{
+    background-color: orange; /*foreground*/    
+    font-size: 20px;
+    font-family: Roboto; /* imported font */
+    
+}
+h1,h2{
+    text-align: center;
+}
+
+/*class = "Centered" - to all images*/
+.Centered{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+/*apply "ALast" to ICA.html page*/
+/* 
+.ALast 
+{ 
+    letter-spacing: 10px; 
+}
+*/
+
+/* <a> link, visited, hover, active
+Set foreground colors as follows:
+1. link and visited set together to green
+2. hover set to yellow
+3. active set to red
+*/
+a:link { background-color: green;}
+a:hover {background-color: yellow;}
+a:active { background-color: red;}
+
+
