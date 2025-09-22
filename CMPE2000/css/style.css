@@ -7,7 +7,7 @@ body{
 }
 
 a{
-    background-color: orange; /*foreground*/    
+    font: red; /*foreground*/    
     font-size: 20px;
     font-family: Roboto; /* imported font */
     
