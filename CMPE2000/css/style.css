@@ -10,6 +10,7 @@ a{
     font: red; /*foreground*/    
     font-size: 20px;
     font-family: Roboto; /* imported font */
+    
     text-align: center;/*not included in ica*/
     
 }
