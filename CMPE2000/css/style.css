@@ -40,4 +40,11 @@ a:link { background-color: green;}
 a:hover {background-color: yellow;}
 a:active { background-color: red;}
 
+.parastyle{
+    font: white;
+    background-color: black;
+    font-style: italic, bold;
+    font-family: roboto;
+
+}
 
