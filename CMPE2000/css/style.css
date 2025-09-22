@@ -14,6 +14,7 @@ a{
     text-align: center;/*not included in ica*/
     
 }
+
 h1,h2{
     text-align: center;
 }
@@ -41,7 +42,7 @@ Set foreground colors as follows:
 a:link { background-color: green;}
 a:hover {background-color: yellow;}
 a:active { background-color: red;}
-
+/*
 .parastyle{
    
     background-color: orange;
@@ -49,4 +50,4 @@ a:active { background-color: red;}
     font-family: roboto;
 
 }
-
+*/
