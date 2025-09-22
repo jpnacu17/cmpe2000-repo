@@ -26,7 +26,7 @@ h1,h2{
 }
 /*apply "ALast" to ICA.html page*/
 
-.ALast 
+#ALast 
 { 
     letter-spacing: 10px; 
 }
