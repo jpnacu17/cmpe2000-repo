@@ -1,3 +1,26 @@
+table{
+    border-collapse:collapse;
+    text-align: center;
+}
+th{
+border: 2px, solid, black;
+
+}
+td{
+    border: 2px, solid, black;
+}
+
+tr:nth-child(even){
+    background-color: #FF50DF;
+}
+th:nth-child(odd),td:nth-child(odd){
+    color:blue;
+}
+
+nav, aside{
+    display: inline-block;
+}
+
 body{
     font-size: 1.5rem;
 }
