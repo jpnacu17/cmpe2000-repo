@@ -29,6 +29,12 @@ header, footer{
 footer{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+
+    text-align:center;
+    border-radius: 10px;
+    font-family: vt323;
+    font-size: smaller;
+    background: pink;
 }
 img{
     width: 300px;
@@ -58,9 +64,31 @@ header.container{
 }
 .time{
     display: flexbox;
-    /*property for ceneter horizontal*/
+    /*property for center horizontal*/
     font-family:"Courier Prime";
 }
+.alert{
+    display:flexbox;
+    align-items: center;
+    justify-content: center;
+}
+.bands{
+    /*band specific font*/
+    font-style: VT323;
+    font-size: larger;
+    border: 2px, red,groove;
+    border-radius: 20px;
+    padding: 20px;
+}
+.covers{
+
+}
+.entities{
+    font-family:VT323;
+    background: #abbada;
+}
+/*feed*/
+
 
 /*
 #grid{
