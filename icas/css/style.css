@@ -22,7 +22,8 @@ h1,h2{
 .Centered{
     margin-left: auto;
     margin-right: auto;
-    display: block;
+    /*display: block;*/
+    display: inline-flexbox;
 }
 /*apply "ALast" to ICA.html page*/
 
