@@ -22,14 +22,19 @@ h1,h2{
 .Centered{
     margin-left: auto;
     margin-right: auto;
-    /*display: block;*/
-    display: inline-flexbox;
+    display: inline-block;
+    
 }
 /*apply "ALast" to ICA.html page*/
 
 #ALast 
 { 
     letter-spacing: 10px; 
+}
+
+hr{
+    height:10px;   
+    background-color: red;
 }
 
 
