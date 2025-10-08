@@ -1,22 +1,41 @@
 table{
     border-collapse:collapse;
     text-align: center;
+    display: block; 
+    border: 2px, dashed, blue;
+        
+    
 }
 th{
 border: 2px, solid, black;
 
 }
+tr{
+   border: 2px, dotted, green;
+
+}
+
 td{
-    border: 2px, solid, black;
+    border: 2px, dotted, green;
+}
+td:hover{
+background-color: orange;
 }
 
 tr:nth-child(even){
-    background-color: #FF50DF;
+    background-color: lightgreen;
 }
+/*
 th:nth-child(odd),td:nth-child(odd){
     color:blue;
 }
-
+    */
+ul{
+    list-style-type: circle;
+}
+ol{
+    list-style-type: decimal-leading-zero;
+}
 body{
     font-size: 1.5rem;
 }
@@ -37,18 +56,14 @@ footer{
     font-family: vt323;
     font-size: smaller;
     background: pink;
-
-        /*grid*/
     
-    grid-column-start: 9;
-    grid-column-end: 10;
-    grid-row-start: 6;
-    grid-row-end: 6;
+
+        
     
 }
 img{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -69,7 +84,7 @@ img{
 
 #grid{
      
-    display: inline-block;
+    display: block;
     /* display:block; */
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -82,7 +97,7 @@ img{
 
 header.container{
     text-align: center;
-    background-color: TOMATO;
+    background-color: tomato;
     font-family:"Press Start 2P";
 
  
@@ -90,9 +105,16 @@ header.container{
 .time {
    
     /*property for center horizontal*/
-    display:flex;
+    /* display:flexbox;
+    
+    /*
     margin-left:auto;
     margin-right:auto;
+    */
+    /* padding-left:100px;
+    padding-right:100px; */
+    
+    
    
 
     font-family:"Courier Prime";
@@ -114,6 +136,7 @@ header.container{
     padding: 20px;
 }
 .covers{
+    /* height: 140px; */
 
     
 
@@ -137,6 +160,8 @@ header.container{
 }
 
 
+
+
 /*adding desktop layout*/
 @media screen and ( min-width : 800px ) {
 /* Your desktop specifc styling here... */
@@ -146,8 +171,8 @@ header.container{
 
     #grid{
     display: grid;
-    grid-template-columns: repeat(10, 450px);
-    grid-template-rows: repeat(7, 300px);
+    grid-template-columns: repeat(11, 300);
+    grid-template-rows: repeat(8, 250);
     
     column-gap: 10px;
     row-gap: 15px;
@@ -162,17 +187,18 @@ header.container{
     /*grid*/
     
     grid-column-start: 3;
-    grid-column-end: span 5;
-    grid-row-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 0;
     grid-row-end: 1;
     }
+
     .time{
             
         /*grid*/
         grid-column-start: 3;
-        grid-column-end: span 3;
+        grid-column-end: 7;
         grid-row-start: 2;
-        grid-row-end: span 3;
+        grid-row-end: 5;
 
         padding-top: 100px;
         padding-bottom: 100px;
@@ -185,24 +211,24 @@ header.container{
 
         /*grid*/
         grid-column-start: 1;
-        grid-column-end: span 2;
+        grid-column-end: 3;
         grid-row-start: 2;
-        grid-row-end: 2;
+        grid-row-end: 3;
     }
     .bands{
 
         /*grid*/
         grid-column-start: 2;
-        grid-column-end: span 2;
+        grid-column-end: 4;
         grid-row-start: 5;
-        grid-row-end: span 2;
+        grid-row-end: 7;
     }
     .covers{
     /*grid*/
     grid-column-start: 4;
-    grid-column-end: span 4;
+    grid-column-end: 9;
     grid-row-start: 5;
-    grid-row-end: span 2;
+    grid-row-end: 7;
 
     }
     .entities{
@@ -210,20 +236,29 @@ header.container{
 
     /*grid*/
     grid-column-start: 1;
-    grid-column-end: span 2;
+    grid-column-end: 3;
     grid-row-start: 3;
-    grid-row-end: span 2;
+    grid-row-end: 5;
 }
     /*feed*/
     .feed{
 
     /*grid*/
-    grid-column-start: 7;
-    grid-column-end: span 2;
+    grid-column-start: 8;
+    grid-column-end: 11;
     grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-end: 4;
     }
+footer{
+/*grid*/
+    
+    grid-column-start: 9;
+    grid-column-end: 11;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    border: 2px, black ,groove;
 
+}
         
 
 }
