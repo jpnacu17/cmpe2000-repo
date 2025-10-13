@@ -13,7 +13,8 @@ h1{
 .container{
     display:grid;
 
-    grid-template-columns: repeat(11, 2fr) ;
+    grid-template-columns: repeat(11, 1fr) ;
+    grid-template-rows: repeat(11, 100px);
     border: black, solid, 2px;
 
 /* grid layout */
@@ -25,6 +26,13 @@ h1{
     border: black, solid, 2px;
     background-color: bisque;
 }
+
+.mid{
+    grid-column:2/11;
+    grid-row:2/11;
+    background-color: white;
+} 
+
 /* top row */
 .Item1{ 
     grid-column:1/2;
@@ -189,11 +197,7 @@ h1{
     grid-row:10/11;
 }
    
-.mid{
-    grid-column:2/11;
-    grid-row:2/11;
-    background-color: white;
-} 
+
 
 
 
