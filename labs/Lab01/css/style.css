@@ -1,25 +1,23 @@
+h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: aqua;
+
+}
+
+
+
+
 /* grid layout */
 .container{
     display:grid;
 
-    grid-template-columns: repeat(11, 300) ;
-    grid-template-rows: repeat(11, 250);
+    grid-template-columns: repeat(11, 2fr) ;
     border: black, solid, 2px;
 
 /* grid layout */
 
-/* grid-template-areas:
-"Item1 Item2 Item3 Item4 Item5 Item6 Item7 Item8 Item9 Item10 Item11 "
-"Item23 mid mid mid mid mid mid mid mid mid Item31 "
-"Item24 mid mid mid mid mid mid mid mid mid Item33 "
-"Item25 mid mid mid mid mid mid mid mid mid Item34 "
-"Item26 mid mid mid mid mid mid mid mid mid Item35 "
-"Item27 mid mid mid mid mid mid mid mid mid Item36 "
-"Item28 mid mid mid mid mid mid mid mid mid Item37 "
-"Item29 mid mid mid mid mid mid mid mid mid Item38 "
-"Item30 mid mid mid mid mid mid mid mid mid Item39 "
-"Item31 mid mid mid mid mid mid mid mid mid Item40 "
-"Item12 Item13 Item14 Item15 Item16 Item17 Item18 Item19 Item20 Item21 Item22 " */
 
 }
 
@@ -194,50 +192,11 @@
 .mid{
     grid-column:2/11;
     grid-row:2/11;
+    background-color: white;
 } 
 
 
 
 
-/* .Item1{ grid-area: Item1;}
-.Item2{ grid-area: Item2;}
-.Item3{ grid-area: Item3;}
-.Item4{ grid-area: Item4;}
-.Item5{ grid-area: Item5;}
-.Item6{ grid-area: Item6;}
-.Item7{ grid-area: Item7;}
-.Item8{ grid-area: Item8;}
-.Item9{ grid-area: Item9;}
-.Item10{ grid-area: Item10;}
-.Item11{ grid-area: Item11;}
-.Item12{ grid-area: Item12;}
-.Item13{ grid-area: Item13;}
-.Item14{ grid-area: Item14;}
-.Item15{ grid-area: Item15;}
-.Item16{ grid-area: Item16;}
-.Item17{ grid-area: Item17;}
-.Item18{ grid-area: Item18;}
-.Item19{ grid-area: Item19;}
-.Item20{ grid-area: Item20;}
-.Item21{ grid-area: Item21;}
-.Item22{ grid-area: Item22;}
-.Item23{ grid-area: Item23;}
-.Item24{ grid-area: Item24;}
-.Item26{ grid-area: Item26;}
-.Item27{ grid-area: Item27;}
-.Item28{ grid-area: Item28;}
-.Item29{ grid-area: Item29;}
-.Item30{ grid-area: Item30;}
-.Item31{ grid-area: Item31;}
-.Item32{ grid-area: Item32;}
-.Item33{ grid-area: Item33;}
-.Item34{ grid-area: Item34;}
-.Item35{ grid-area: Item35;}
-.Item36{ grid-area: Item36;}
-.Item37{ grid-area: Item37;}
-.Item38{ grid-area: Item38;}
-.Item39{ grid-area: Item39;}
-.Item40{ grid-area: Item40;}
-.mid{ grid-area: mid;} */
 
 
