@@ -1,7 +1,7 @@
 .container{
     display:grid;
     grid-column: repeat(3, 1fr);
-    grid-row: repeat(5, 1fr);
+    grid-row: repeat(3, 1fr);
     column-gap: 5px;
     
 }
@@ -19,8 +19,8 @@ h2{
 }
 
 img{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     /* center */
     display:block;
     margin:auto;
@@ -33,17 +33,14 @@ img{
 
 #winners{
     grid-column:2/3;
-    grid-row:1/5;
+    grid-row:1/4;
 }
 
 #winnerstable{
     border-collapse: collapse;
-    /* border: solid, black , 2px; */
 
-
-        display:flex;
-        justify-content: center;
-
+    display:flex;
+    justify-content: center;
 
 
 }
@@ -69,6 +66,9 @@ table{
         padding:auto;
     grid-column:1/2;
     grid-row:2/3;
+
+    padding-right:40px;
+    padding-left:40px;
 }
 
 
@@ -83,8 +83,15 @@ border-collapse: collapse;
 tr,td,th{
     
     border: solid, black , 2px;
-    padding:5px;
+    padding-right:40px;
+    padding-left:40px;
 }
+
+/* #winnerstable tr,td,th{
+    
+    padding:35px;
+        
+} */
 
 footer{
     text-align: center;
