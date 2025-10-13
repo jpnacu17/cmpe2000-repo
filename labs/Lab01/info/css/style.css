@@ -27,9 +27,14 @@ img{
     padding:auto;
 }
 
-#date{
+#date, img, th{
     text-align: center;
+
+    padding-right:40px;
+    padding-left:40px;
+ 
 }
+
 
 #winners{
     grid-column:2/3;
@@ -83,8 +88,7 @@ border-collapse: collapse;
 tr,td,th{
     
     border: solid, black , 2px;
-    padding-right:40px;
-    padding-left:40px;
+
 }
 
 /* #winnerstable tr,td,th{
