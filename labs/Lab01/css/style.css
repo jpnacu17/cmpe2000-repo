@@ -27,16 +27,13 @@ h1{
     background-color: bisque;
 }
 
-.mid{
-    grid-column:2/11;
-    grid-row:2/11;
-    background-color: white;
-} 
+
 
 /* top row */
 .Item1{ 
     grid-column:1/2;
     grid-row:1/2;
+
 }
 .Item2{    
     grid-column:2/3;
@@ -196,7 +193,90 @@ h1{
     grid-column:11/12;
     grid-row:10/11;
 }
+        /* Middle area */
+        .mid{
+            grid-column:2/11;
+            grid-row:2/11;
+            background-color: white;
+
+
+            display: grid;
+            /* grid-template-columns: repeat (2,1fr);
+            grid-template-rows: repeat (4,1fr);; */
+            grid-template-columns: repeat (2,500px);
+            grid-template-rows: repeat (4,1fr);
+            grid-gap:10px;
+                        padding-top: 100px;
+        } 
+        .player1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-color: green;
+    
+            
+        }
+        .player2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-color: pink;
+
+            
+        }
+        h3{
+            text-align: center;
+        }
+        .links{
+            grid-column: span 2;
+            grid-row: 3/4;
+       
+        }
    
+/* colored border per cell */
+/* top */
+.Item2, .Item4, .Item5{
+border-bottom-style:solid;
+border-bottom-width:20px;
+border-bottom-color:red;
+}
+.Item7, .Item8, .Item10{
+border-bottom-style:solid;
+border-bottom-width:20px;
+border-bottom-color:yellow;
+}
+/* bottom */
+.Item13, .Item14, .Item16{
+border-top-style:solid;
+border-top-width:20px;
+border-top-color:paleturquoise;
+}
+.Item19, .Item21{
+border-top-style:solid;
+border-top-width:20px;
+border-top-color:maroon;
+}
+/* left */
+.Item23, .Item24, .Item26{
+border-right-style:solid;
+border-right-width:20px;
+border-right-color:orange;
+}
+.Item28, .Item29, .Item31{
+border-right-style:solid;
+border-right-width:20px;
+border-right-color:purple;
+}
+/* right */
+.Item32, .Item33, .Item38{
+border-left-style:solid;
+border-left-width:20px;
+border-left-color:green;
+}
+.Item28, .Item40{
+border-left-style:solid;
+border-left-width:20px;
+border-left-color:blue;
+}
+
 
 
 
