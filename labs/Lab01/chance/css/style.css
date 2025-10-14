@@ -48,8 +48,12 @@ tr,td,th{
 footer{
     text-align: center;
     color:red;
+    font-weight: bolder;
 
 }
 
+#rentalpolicy{
+    text-align:center;
+}
 
 
