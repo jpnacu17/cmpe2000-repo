@@ -39,6 +39,9 @@ tr,td,th{
     border: solid, black , 2px;
     padding:5px;
 }
+#chancedraw{
+    padding-right:300px;
+}
 
 #chance{
     /* grid-column:2/3; */
@@ -54,6 +57,25 @@ footer{
 
 #rentalpolicy{
     text-align:center;
+    padding-left:100px;
+    padding-right:100px;
 }
 
+li{
+    list-style: disc;
+}
 
+/* link pseudo selectors */
+
+a:link{
+    color:black
+}
+a:visited{
+    color: red
+}
+a:hover{
+ background-color: aquamarine;
+}
+a:active{
+background-color: orangered;
+}

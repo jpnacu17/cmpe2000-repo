@@ -51,13 +51,22 @@ img{
 }
 
 #rental{
+
     grid-column:3/4;
     grid-row:1/2;
+    
+}
+
+#policy{
+    text-align: center;
+    padding-left:150px;
+    padding-right:150px;
 }
 
 #rentaltable{
         display:flex;
         justify-content: center;
+        
 }
 table{
         display:flex;
@@ -67,13 +76,14 @@ table{
 
 .links{
     display: flex;
-        margin:auto;
-        padding:auto;
+        /* margin:auto;
+        padding:auto; */
+        justify-content: left;
     grid-column:1/2;
     grid-row:2/3;
 
-    padding-right:40px;
-    padding-left:40px;
+    padding-right:300px;
+   
 }
 
 
@@ -88,20 +98,34 @@ border-collapse: collapse;
 tr,td,th{
     
     border: solid, black , 2px;
-
+   
+}
+td{
+    font-family: "Almendra SC";
 }
 
-/* #winnerstable tr,td,th{
-    
-    padding:35px;
-        
-} */
+
 
 footer{
     text-align: center;
     color:red;
     font-weight: bolder;
 }
+li{
+    list-style: disc;
+}
 
+/* link pseudo selectors */
 
-
+a:link{
+    color:black
+}
+a:visited{
+    color: red
+}
+a:hover{
+ background-color: aquamarine;
+}
+a:active{
+background-color: orangered;
+}

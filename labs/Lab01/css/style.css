@@ -6,7 +6,12 @@ h1{
 
 }
 
-
+li{
+    list-style: disc;
+}
+nav{
+    padding-left:25px;
+}
 
 
 /* grid layout */
@@ -17,7 +22,7 @@ h1{
     grid-template-rows: repeat(11, 100px);
     border: black, solid, 2px;
 
-/* grid layout */
+
 
 
 }
@@ -130,29 +135,33 @@ h1{
     grid-column:1/2;
     grid-row:3/4;
 }
-.Item26{
+.Item25{
     grid-column:1/2;
     grid-row:4/5;
 }
-.Item27{
+.Item26{
     grid-column:1/2;
     grid-row:5/6;
 }
-.Item28{
+.Item27{
     grid-column:1/2;
     grid-row:6/7;
 }
-.Item29{
+.Item28{
     grid-column:1/2;
     grid-row:7/8;
 }
-.Item30{
+.Item29{
     grid-column:1/2;
     grid-row:8/9;
 }
-.Item31{
+.Item30{
     grid-column:1/2;
     grid-row:9/10;
+}
+.Item31{
+    grid-column:1/2;
+    grid-row:10/11;
 }
 
 /* right column */
@@ -251,6 +260,10 @@ h1{
             grid-row:2/3;
             height:50px;
 
+            display:flex;
+            justify-content: right;
+            padding-right:100px;
+
 
         }
         #dice2{
@@ -258,7 +271,12 @@ h1{
             grid-row:2/3;
             height:50px;
 
+            display:flex;
+            justify-content: left;
+            padding-left:100px;
+
         }
+
 
    
 /* colored border per cell */
@@ -296,20 +314,31 @@ border-right-width:20px;
 border-right-color:purple;
 }
 /* right */
-.Item32, .Item33, .Item38{
+.Item32, .Item33, .Item35{
 border-left-style:solid;
 border-left-width:20px;
 border-left-color:green;
 }
-.Item28, .Item40{
+.Item38, .Item40{
 border-left-style:solid;
 border-left-width:20px;
 border-left-color:blue;
 }
 
+/* link pseudo selectors */
 
-
-
+a:link{
+    color:black
+}
+a:visited{
+    color: red
+}
+a:hover{
+ background-color: aquamarine;
+}
+a:active{
+background-color: orangered;
+}
 
 
 
