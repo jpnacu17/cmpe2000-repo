@@ -52,5 +52,26 @@ a:active { background-color: red;}
 }
 */
 
+.parastyle{
 
+    /* background-color: orange; */
+    font-style: italic, bold;
+    font-family: roboto;
 
+}
+
+#aboutme{
+    border: solid, 5px, blue;
+    border-radius: 5px;
+    background-color: aqua;
+
+}
+.links{
+    display:flex;
+    justify-content: center;
+
+}
+
+body{
+    background-image: url(../images/dwwallpaper.jpg) ;
+}

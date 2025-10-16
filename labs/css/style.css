@@ -50,3 +50,9 @@ a:active { background-color: red;}
 
 }
 
+.links{
+    display:flex;
+    justify-content: center;
+
+}
+
