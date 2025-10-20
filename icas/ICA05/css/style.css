@@ -1,0 +1,13 @@
+h1{
+    background-color: blue;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    padding:40px;
+
+}
+
+/*adding desktop layout*/
+@media screen and ( min-width : 800px ) {
+/* Your desktop specifc styling here... */
+}
