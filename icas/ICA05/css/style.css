@@ -6,8 +6,26 @@ h1{
     padding:40px;
 
 }
+#button{
+    display:flex;
+    justify-content: stretch;
+}
 
 /*adding desktop layout*/
 @media screen and ( min-width : 800px ) {
 /* Your desktop specifc styling here... */
+
+#formbody{
+    display:grid;
+    
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+#form1{
+    background-color: aquamarine;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
 }
