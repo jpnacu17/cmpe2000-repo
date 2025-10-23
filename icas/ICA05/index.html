@@ -7,61 +7,79 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>ICA05 - CSS Grid Forms</h1>
-
     <div id="formbody">
-    <!-- creating form -->
-     <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
-
-
-    <!-- Hidden field -->
-    <input type="hidden" id="hiddenvalue" name="hiddenvalue" placeholder="your name">
-
-    <!-- Username -->
-    <p>Username: <br> <input type="text" id="username" name="username" placeholder="your username" ></p>
-
-    <!-- pin/password field -->
-    <p>Pin: <br> <input type="password" id="pin" name="pin" placeholder="your pin" maxlength="6" ></p>
-
-    <!-- rangefield --> 
-    <p>Byte Value: <br> <input type="range" id="bytevalue" name="bytevalue" min="0" max="128" step="1"></p>
-
-    <!-- date field -->
-    <p>Best Date: <br> <input type="date" id="datevalue" name="datevalue" value="09/09/1967"></p>
-
-    <!-- color field -->
-    <p>Best Color: <br> <input type="color" id="colorvalue" name="colorvalue" value="#ABCDEF"></p>
-
-    <!-- fieldset -->
-
-    <fieldset>
-        <legend>Preferred Travel</legend>
-        <input type="radio" name="planes" value="aircraft"> Planes <br>
-        <input type="radio" name="trains" value="railway"> Trains <br>
-        <input type="radio" name="automobile" value="car"> Automobile <br>
-    </fieldset>
-    <br>
-    <!-- dropdown -->
-     <p> Choice of Scifi:
-     <select id="science_fiction" name="science_fiction">
-        <option value="Metropolis"> Really Old </option>
-        <option value="Star Trek">  Old </option>
-        <option value="Star Wars"> Kinda Old </option>
-        <option value="Dune">  Recent </option>
-     </select>
-     </p>
-
-     <!-- checkbox -->
-     <p>Acknowledge Use: <input type="checkbox" name="acknowledge"></p>
+        <h1 class="header">ICA05 - CSS Grid Forms</h1>
     
 
-     <!-- reset and submit -->
-    <input id="button" type="reset" name="reset">
-    
-    <input id="button" type="submit" name="submit">
-     </form>
+        <!-- creating form -->
+        <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
+
+
+            <!-- Hidden field -->
+            <input type="hidden" id="hiddenvalue" name="hiddenvalue" value="your_name" placeholder="your name">
+
+            <!-- Username -->
+            <p>Username: <br> <input type="text" id="username" name="username" placeholder="your username" ></p>
+
+            <!-- pin/password field -->
+            <p>Pin: <br> <input type="password" id="pin" name="pin" placeholder="your pin" maxlength="6" ></p>
+
+            <!-- rangefield --> 
+            <p>Byte Value: <br> <input type="range" id="bytevalue" name="bytevalue" min="0" max="128" step="1"></p>
+
+            <!-- date field -->
+            <p>Best Date: <br> <input type="date" id="datevalue" name="datevalue" value="09/09/1967"></p>
+
+            <!-- color field -->
+            <p>Best Color: <br> <input type="color" id="colorvalue" name="colorvalue" value="#ABCDEF"></p>
+
+            <!-- fieldset -->
+
+            <fieldset id="prefferedtravel">
+                <legend>Preferred Travel</legend>
+                <input type="radio" name="planes" value="aircraft"> Planes <br>
+                <input type="radio" name="trains" value="railway"> Trains <br>
+                <input type="radio" name="automobile" value="car"> Automobile <br>
+            </fieldset>
+            <br>
+            <!-- dropdown -->
+            <p id="scifi" > Choice of Scifi:
+            <select id="science_fiction" name="science_fiction">
+                <option value="Metropolis"> Really Old </option>
+                <option value="Star Trek">  Old </option>
+                <option value="Star Wars"> Kinda Old </option>
+                <option value="Dune">  Recent </option>
+            </select>
+            </p>
+
+            <!-- checkbox -->
+            <p id="acknowledge">Acknowledge Use: <input type="checkbox" name="acknowledge"></p>
+            
+                <div id="resetandsubmit">
+                <!-- reset and submit -->
+                    <input id="button" type="reset" name="reset">
+                    <br>
+                    <input id="button" type="submit" name="submit">
+                </div>
+        </form>
+
+            <div class="footer">
+                <footer > 
+                    <p>&copy; Jan Paul Yves Nacu</p>   
+                    <p>Last Modified: <script> document.write(document.lastModified) </script></p>
+                </footer>
+            </div>
+
+            <!-- background -->
+             <div class="backgroundimg1">
+                <!-- <img src="images/startrek.jpg"> -->
+             </div>
+            <div class="backgroundimg2">
+                <!-- <img src="images/startrek.jpg"> -->
+             </div>
 
      </div>
+    
     
 </body>
 </html>
