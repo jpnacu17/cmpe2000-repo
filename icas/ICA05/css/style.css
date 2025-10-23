@@ -24,6 +24,17 @@ body{
 background-color: yellow;
 }
 
+#bytevalue{
+    accent-color: blue;
+}
+
+#acknowledge{
+    accent-color: blue;
+}
+#prefferedtravel{
+Border-color: blue;
+}
+
 /*adding desktop layout*/
 @media screen and ( min-width : 800px ) {
 /* Your desktop specifc styling here... */
@@ -53,7 +64,7 @@ background-color: yellow;
 }
 
 #form1{
-    background-color: aquamarine;
+    background-color: skyblue;
     grid-column-start: 2;
     grid-column-end: 3;
 
