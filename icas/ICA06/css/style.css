@@ -31,123 +31,44 @@ img, #location{
 @media screen and ( min-width : 800px ) {
 /* Your desktop specifc styling here... */
 
-#formbody{
-    display:grid;
-    
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: repeat(3, auto); 
-    /* background-image: url(images/startrek.jpg); */
-}
-.header{
-    grid-column-start: 1;
-    grid-column-end: end;
-    grid-row-start: 1;
-    grid-row-end: 2; 
+    #formbody{
+        display:grid;
+        
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-template-rows: repeat(3, auto); 
+        /* background-image: url(images/startrek.jpg); */
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 1;
+        grid-row-end: 2; 
 
-    height: 20%;
-}
-.footer{
-    grid-column-start: 1;
-    grid-column-end: end;
-    grid-row-start: 3;
-    grid-row-end: end; 
-
-
-}
-
-#form1{
-    background-color: skyblue;
-    grid-column-start: 2;
-    grid-column-end: 3;
-
-    display:grid;
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: 1fr, 1fr, 1fr, 1fr, auto;
-    grid-gap:50px;
-}
+        height: 20%;
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 3;
+        grid-row-end: end; 
 
 
-/* first row */
-#username{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-#pin{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-#bytevalue{
-    grid-column-start: 3;
-    grid-column-end: 4;  
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
-/* second row */
-#datevalue{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;  
-}
-#colorvalue{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;     
-}
+    }
 
-#prefferedtravel{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;      
-}
-/* third row */
-#scifi{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4; 
-}
-#acknowledge{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;  
-}
+    #form1{
+        background-color: skyblue;
+        grid-column-start: 2;
+        grid-column-end: 3;
 
-#resetandsubmit{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 5; 
-}
+        display:grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr, auto;
+        grid-gap:50px;
+    }
 
-.backgroundimg1{
-    display:flex;
-    grid-column-start: 1;
-    grid-column-end: 2 ;
-    grid-row-start: 2;
-    grid-row-end: 3; 
 
-    background-image: url(../images/startrek.jpg);
-    background-position: center;  
 
-} 
-.backgroundimg2{
-    display:flex;
-    grid-column-start: 3;
-    grid-column-end: 4 ;
-    grid-row-start: 2;
-    grid-row-end: 3; 
 
-    background-image: url(../images/startrek.jpg);
-    background-position: center;  
 
-} 
 
 }
