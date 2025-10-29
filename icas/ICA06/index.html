@@ -8,39 +8,60 @@
 </head>
 <body>
     <div id="formbody">
-        <h1 class="header">ICA06 - Javascript Intro</h1>
-    
+        <h1 class="header">ICA06 - Javascript Intro</h1>    
 
         <!-- creating form -->
         <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
 
-            <p> Redirect using location: </p>
-            <button type="button" id="location" location="google.com"><img src="images/chromeicon.png" id="location" alt="chrome icon"></button> <!-- google chrome img icon-->
+            <label> Redirect using location: </label>
+            <div id="divinput">
+            <button type="button" id=" location" location="google.com"><img src="images/chromeicon.png" id="location" alt="chrome icon"></button> <!-- google chrome img icon-->
+            </div>
 
-            <p> Background Color Picker: </p>
+            <label> Background Color Picker: </label>
+            <div id="divinput">
             <input type="color" id="backgroundcolor" name="backgroundcolor">
-            <button type="button" id="backgroundcolor">Set Background </button>
+            <button type="button" id="colorbutton">Set Background </button>
+            </div>
 
-            <p>Current Dimensions: </p>
-            <input type="text">
-            <button type="button"cvalue=""> </button>
-           
-            <p>What time is it: </p>
-            <input type="text">
+            <label>Current Dimensions: </label>    
+            <div id="divinput">       
+            <button type="button" id="currentdimension" >Show Dimensions </button>
+            <input type="text" id="dimensions" value="">
+            </div>
 
-
-            <p>Secret Agent, Man: </p>
-            <p>Prompt Test: </p>
-            <p>Make a Tux: </p>
-
-            <p>Dynamic Update: </p>
-            <input type="ranges">
-            <button type="button">Dynamic Width</button>
-            <p>Make a Table: </p>
+            <label>What time is it: </label>
+            <div id="divinput">
+            <input type="text" id=" time" value="Now">
+            </div>
 
 
+            <label>Secret Agent, Man: </label>
+            <div id="divinput">
+            <input type="text" id=" agent" value="">
+            </div>
 
+            <label>Prompt Test: </label>
+            <div id="divinput">
+            <input type="text" id=" prompt" value="">
+            </div>
 
+            <label>Make a Tux: </label>
+            <div id="divinput">
+            </div>
+
+            <label>Dynamic Update: </label>
+            <div id="divinput">
+            <input type="range" id=" range">
+            <button type="button" id=" update">Dynamic Width</button>
+            </div>
+
+            <label>Make a Table: </label>
+            <div id="divinput">
+            <input type="range" id=" columns" min="0" max="10">
+            <input type="range" id=" rows">
+            <button type="button" id=" table">tabelize</button>
+            </div>
 
 
 

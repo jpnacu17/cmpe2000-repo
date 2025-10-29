@@ -13,18 +13,35 @@ body{
 .footer{
     background-color:palegoldenrod;
     /* height: 5%; */
-    text-align: center;
+    text-align: center;   
+}
+
+button, input{
+    height:50%;
+    width:100%; 
+    text-align: center;   
+}
+
+img{
+    height: 25px;
+    width: auto;
+}
+
+#backgroundcolor, #dimensions{    
+    width: 20%;
    
 }
 
-
-#button{
-    height:50%;
-    width:100%;
+#colorbutton, #currentdimension{    
+    width: 40%;
 }
-img, #location{
-    height: 50px;
-    width: auto;
+
+label{
+    height:55px;
+}
+
+#range, #columns, #rows{
+    width:40%;
 }
 
 /*adding desktop layout*/
@@ -51,8 +68,6 @@ img, #location{
         grid-column-end: end;
         grid-row-start: 3;
         grid-row-end: end; 
-
-
     }
 
     #form1{
@@ -61,12 +76,19 @@ img, #location{
         grid-column-end: 3;
 
         display:grid;
-        grid-template-columns: repeat (2, 1fr);
-        grid-template-rows: 1fr, 1fr, 1fr, 1fr, auto;
-        grid-gap:50px;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: 1fr, 1fr, 1fr, 1fr, auto; */
+        /* grid-gap:50px; */
     }
+    label{
+        grid-column-start: 1;
+        grid-column-end: 2;
 
-
+    }
+    #divinput{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 
 
 
