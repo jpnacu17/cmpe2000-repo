@@ -55,3 +55,10 @@ a:active { background-color: red;}
     font-family: roboto;
 
 }
+
+#unfinished{
+    font: red;
+    text-decoration: line-through;
+    
+    
+}
