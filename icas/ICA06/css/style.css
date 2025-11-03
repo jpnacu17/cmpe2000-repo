@@ -16,9 +16,10 @@ body{
     text-align: center;   
 }
 
+
 button, input{
-    height:50%;
-    width:100%; 
+    height:1fr;
+    width:95%; 
     text-align: center;   
 }
 
@@ -40,13 +41,15 @@ img, #location{
     width: auto;
 }
 
-label{
-    height:55px;
+p{
+    height:1fr;
 }
 
 #range, #columns, #rows{
     width:40%;
 }
+
+
 
 /*adding desktop layout*/
 @media screen and ( min-width : 800px ) {

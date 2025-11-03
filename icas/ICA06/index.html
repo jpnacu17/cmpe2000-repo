@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICA06</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascript -->
+    <script src="js/ica6.js"></script>
 </head>
 <body>
     <div id="formbody">
@@ -14,53 +16,50 @@
         <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
 
             <p> Redirect using location: </p>
-            <button type="button" id="location" location="google.com"><img src="images/chromeicon.png" id="location" alt="chrome icon"></button> <!-- google chrome img icon-->
+            <button type="button" id="location" onclick="changelocation()" ><img src="images/chromeicon.png" id="location" alt="chrome icon"></button> <!-- google chrome img icon-->
+
+   
 
             <p> Background Color Picker: </p>
-            <label> Redirect using location: </label>
-            <div id="divinput">
-            <button type="button" id=" location" location="google.com"><img src="images/chromeicon.png" id="location" alt="chrome icon"></button> <!-- google chrome img icon-->
-            </div>
-
-            <label> Background Color Picker: </label>
             <div id="divinput">
             <input type="color" id="backgroundcolor" name="backgroundcolor">
-            <button type="button" id="colorbutton">Set Background </button>
+            <button type="button" id="colorbutton" onclick="changebackground(this)">Set Background </button>
             </div>
 
-            <label>Current Dimensions: </label>    
+            <p>Current Dimensions: </p>    
             <div id="divinput">       
             <button type="button" id="currentdimension" >Show Dimensions </button>
             <input type="text" id="dimensions" value="">
             </div>
 
-            <label>What time is it: </label>
+            <p>What time is it: </p>
             <div id="divinput">
             <input type="text" id=" time" value="Now">
             </div>
 
 
-            <label>Secret Agent, Man: </label>
+            <p>Secret Agent, Man: </p>
             <div id="divinput">
             <input type="text" id=" agent" value="">
             </div>
 
-            <label>Prompt Test: </label>
+            <p>Prompt Test: </p>
             <div id="divinput">
             <input type="text" id=" prompt" value="">
             </div>
 
-            <label>Make a Tux: </label>
+            <p>Make a Tux: </p>
             <div id="divinput">
+                <button type="button"><img id="tux" src="images/tuxpenguin.jpg" ></button>
             </div>
 
-            <label>Dynamic Update: </label>
+            <p>Dynamic Update: </p>
             <div id="divinput">
             <input type="range" id=" range">
             <button type="button" id=" update">Dynamic Width</button>
             </div>
 
-            <label>Make a Table: </label>
+            <p>Make a Table: </p>
             <div id="divinput">
             <input type="range" id=" columns" min="0" max="10">
             <input type="range" id=" rows">
