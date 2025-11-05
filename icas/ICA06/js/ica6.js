@@ -2,6 +2,7 @@
 window.onload = () => {
 document.querySelector("#colorbutton").onclick = changebackground;
 document.querySelector("#currentdimension").onclick = obtaindimensions;
+document.querySelector("#time").oncick = gettime;
 
 }
 
@@ -13,19 +14,24 @@ function changebackground(){
     
     document.body.style.backgroundColor = document.querySelector("#backgroundcolor").value;
 
-    //document.querySelector(body).style.backgroundColor = document.querySelector("#backgroundcolor").value;
 
-    // document.body.style.background = document.querySelector("#backgroundcolor").value;
 }
 
 function obtaindimensions(){
 
 
-    var str = ("width is" ,innerWidth) 
-document.querySelector("#dimensions").textContent = str
+    let str = ("[" + innerWidth + "," + innerHeight +"]" );
 
+    document.querySelector("#dimensions").value = str;    
 
-//console.log("width is", innerWidth);
+}
+
+function gettime(){
+    const d = new Date();
+
+    let time = d.toTimeString();
+    
+    window.alert("time is" + time);
 
 }
 
