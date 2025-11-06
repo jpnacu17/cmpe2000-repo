@@ -42,20 +42,18 @@ function getagent(){
 
 function prompttest(){
 
-    // var userprompt = window.prompt("Current Value" + innerHTML + "Enter a new number");
-  
-    var string = "Current Value" + userprompt + "Enter a new number";
-    var userprompt = window.prompt(string, "5");
+    var def = 5;
+    var string = "Current Value (" + def + ") Enter a new number";
+    var userprompt = window.prompt(string, def);
 
-
-    // var userprompt = window.prompt("Current Value" + innerHTML + "Enter a new number");
-
-    // if (isNaN(userpompt)){
-    //     console.log(innerHTML + "is Null or NaN")
-    // }
-    // else
-    // document.querySelector("#prompt").innerHTML = userprompt;
-
+    if (isNaN(userprompt)){
+        console.log(userprompt + " is Null or NaN")
+    }
+    else
+    {
+    document.querySelector("#prompt").innerHTML = userprompt;
+    def = userprompt;
+    }
 
 }
 
