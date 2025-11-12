@@ -57,8 +57,10 @@ a:active { background-color: red;}
 }
 
 #unfinished{
-    font: red;
+    /* font: red; */
     text-decoration: line-through;
+    background-color: red;
+    border: solid, red, 2px;
     
     
 }
