@@ -19,10 +19,25 @@ const takeAChanceMoney = [
 
 //windows onload
 onload = ()=> {
+ 
+suiteorder();
 document.querySelector("#RollDice").onclick = diceroll;
 
 }
 
+function suiteorder(){
+    let suitelist = document.querySelectorAll("section");
+
+    for(let i=0; i<suitelist.length; i++){
+        let posn = suitelist[i].getAttribute("suite"); //gets the suite value and puts it on variable posn
+        let row = parseInt(posn.substring(0,2)); //substring index 0 to 2 (first 2 characters)
+        let col = parseInt(posn.substring(2,4));
+
+        //set property grid row and col
+        suitelist[i].style.setProperty("grid-row", `${row}/${row+1}`); 
+        suitelist[i].style.setProperty("grid-column", `${col}/${col+1}`);
+    }
+}
 
     
 function diceroll(){
@@ -31,7 +46,7 @@ function diceroll(){
     let die = document.querySelector(".die");
 
     //test
-    alert("rand number is "+ rand);
+    //alert("rand number is "+ rand);
     
     
 
@@ -69,6 +84,6 @@ function diceroll(){
 
 
 
-    //document.querySelector("#die1").img
+    
     
 }
