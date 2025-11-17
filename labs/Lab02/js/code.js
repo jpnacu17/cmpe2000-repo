@@ -21,6 +21,7 @@ const takeAChanceMoney = [
 onload = ()=> {
  
 suiteorder();
+layout();
 document.querySelector("#RollDice").onclick = diceroll;
 
 }
@@ -39,50 +40,106 @@ function suiteorder(){
     }
 }
 
+function layout(){
+    let l= document.querySelectorAll(".brown");
+
+    console.log(l)
+    
+
+
+}
+
     
 function diceroll(){
     //randomize dice
-    let rand = Math.floor((Math.random() * 6) + 1); //dice range from 1 to 6
-    let die = document.querySelector(".die");
+    let rand1 = Math.floor((Math.random() * 6) + 1); //dice range from 1 to 6
+    let rand2 = Math.floor((Math.random() * 6) + 1);
+    let die = document.querySelectorAll(".die");
+    
 
     //test
     //alert("rand number is "+ rand);
-    
-    
+    console.log(die);
 
-    switch(rand){ // each case represent the dice value
+    //for dice 1
+    switch(rand1){ // each case represent the dice value
         case 1:
-            die.src ="./images/dice1.jpg";
+            die[0].src ="./images/dice1.jpg";
+            //die[1].src ="./images/dice1.jpg";
 
         break;
 
         case 2:
-            die.src ="./images/dice2.jpg";
+            die[0].src ="./images/dice2.jpg";
+            //die[1].src ="./images/dice2.jpg";
 
         break;
 
         case 3:
-            die.src ="./images/dice3.jpg";
+            die[0].src ="./images/dice3.jpg";
+            //die[1].src ="./images/dice3.jpg";
+
 
         break;
 
         case 4:
-            die.src ="./images/dice4.jpg";
+            die[0].src ="./images/dice4.jpg";
+            //die[1].src ="./images/dice4.jpg";
 
         break;
 
         case 5:
-            die.src ="./images/dice5.jpg";
+            die[0].src ="./images/dice5.jpg";
+            //die[1].src ="./images/dice5.jpg";
 
         break;
 
         case 6:
-            die.src ="./images/dice6.jpg";
+            die[0].src ="./images/dice6.jpg";
+            //die[1].src ="./images/dice6.jpg";
 
         break;
     }
 
+    //for dice 2
+    switch(rand2){ // each case represent the dice value
+        case 1:
+            //die[0].src ="./images/dice1.jpg";
+            die[1].src ="./images/dice1.jpg";
 
+        break;
+
+        case 2:
+            //die[0].src ="./images/dice2.jpg";
+            die[1].src ="./images/dice2.jpg";
+
+        break;
+
+        case 3:
+            //die[0].src ="./images/dice3.jpg";
+            die[1].src ="./images/dice3.jpg";
+
+
+        break;
+
+        case 4:
+            //die[0].src ="./images/dice4.jpg";
+            die[1].src ="./images/dice4.jpg";
+
+        break;
+
+        case 5:
+            //die[0].src ="./images/dice5.jpg";
+            die[1].src ="./images/dice5.jpg";
+
+        break;
+
+        case 6:
+            //die[0].src ="./images/dice6.jpg";
+            die[1].src ="./images/dice6.jpg";
+
+        break;
+    }
 
     
     
