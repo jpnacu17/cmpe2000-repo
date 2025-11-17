@@ -41,9 +41,22 @@ function suiteorder(){
 }
 
 function layout(){
-    let l= document.querySelectorAll(".brown");
+    //test
+    let lb = document.querySelectorAll(".lightblue");
+    let b = document.querySelectorAll(".brown");
+    let lb = document.querySelectorAll(".lightblue");
+    let lb = document.querySelectorAll(".lightblue");
+    let lb = document.querySelectorAll(".lightblue");
+    let lb = document.querySelectorAll(".lightblue");
+    let lb = document.querySelectorAll(".lightblue");
+    let lb = document.querySelectorAll(".lightblue");
+    console.log(lb);
+    
+    for(let i=0; i<lb.length; i++)
+    lb[i].setAttribute("class", "reg lightblue top");
+    
 
-    console.log(l)
+    
     
 
 
