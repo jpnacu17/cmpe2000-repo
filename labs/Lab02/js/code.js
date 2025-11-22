@@ -124,7 +124,7 @@ function diceroll(){
 
         case 6:
             die[0].src ="./images/dice6.jpg";
-            //die[1].src ="./images/dice6.jpg";
+            //die[1].src =".
 
         break;
     }
@@ -188,7 +188,13 @@ function addPlayers(){
 }
 function playerpiece(){
     // put pieces on the "GO" tile
-    let parentElem1 = document.querySelector("#gameboard");
+    //let parentElem1 = document.querySelector("#gameboard");
+    let section = document.querySelectorAll("section");  
+    let posn = section[i].getAttribute("suite");
+    //double check
+    let parentElem1 = document.querySelector("section[suite=1111]");
+    //test
+    console.log(parentElem1);
     let newElem1 = document.createElement("img");
     newElem1.setAttribute("src","./images/hat.jpg");
     newElem1.setAttribute("id", "P1piece");
@@ -196,10 +202,10 @@ function playerpiece(){
 
     
     let P1 = document.querySelector("P1piece");
+
     //grid positioning of the piece
     let row = parseInt(11); 
     let col = parseInt(11);
-
     //set property grid row and col
     P1.style.setProperty("grid-row", `${row}/${row}`); 
     P1.style.setProperty("grid-column", `${col}/${col}`);
