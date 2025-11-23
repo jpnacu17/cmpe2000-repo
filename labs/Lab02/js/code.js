@@ -17,13 +17,15 @@ const takeAChanceMoney = [
     -100
 ]
 
+// const i = 0; //position of piece
 //windows onload
 onload = ()=> {
 
     layout();
     addPlayers();
     playerpiece();
-    document.querySelector("#RollDice").onclick = diceroll;
+    //document.querySelector("#RollDice").onclick = diceroll;
+    document.querySelector("#RollDice").onclick = movePlayer;
 
 }
 
@@ -85,9 +87,9 @@ function diceroll(){
 
     //test
     //alert("rand number is "+ rand);
-    console.log(die);
-    console.log(rand1);
-    console.log(rand2);
+    // console.log(die);
+    // console.log(rand1);
+    // console.log(rand2);
 
     //for dice 1
     switch(rand1){ // each case represent the dice value
@@ -167,10 +169,17 @@ function diceroll(){
             die[1].src ="./images/dice6.jpg";
 
         break;
+
+        
+        
     }
 
+    let dice = rand1 + rand2;
+    //console.log(dice);
     
-    
+    return rand1 + rand2;
+    //test
+
 }
 
 function addPlayers(){
@@ -186,28 +195,64 @@ function addPlayers(){
     newElem2.setAttribute("id", "p2");
     parentElem2.append(newElem2);
 }
+
+let i = 0;
 function playerpiece(){
     // put pieces on the "GO" tile
     //let parentElem1 = document.querySelector("#gameboard");
-    let section = document.querySelectorAll("section");  
-    let posn = section[i].getAttribute("suite");
-    //double check
-    let parentElem1 = document.querySelector("section[suite=1111]");
-    //test
-    console.log(parentElem1);
+
+    let section = document.querySelectorAll("section");
+
+  
+    let node = section[0].getAttribute('id');    
+ 
+    let parentElem1 = document.querySelector(`#${node}`);
+    let parentElem2 = document.querySelector(`#${node}`);
+        //test        
+        console.log(section);            
+        console.log(parentElem1);
+        console.log(node);
     let newElem1 = document.createElement("img");
     newElem1.setAttribute("src","./images/hat.jpg");
-    newElem1.setAttribute("id", "P1piece");
+    newElem1.setAttribute("id", "P1piece");    
+    parentElem1.append(newElem1);        
+    let newElem2 = document.createElement("img");
+    newElem2.setAttribute("src","./images/shoe.jpg");
+    newElem2.setAttribute("id", "P2piece");    
+    parentElem2.append(newElem2); 
+    
+    
+
+}
+
+function movePlayer(){
+    let dice = diceroll();
+    console.log(dice);
+    
+    i = i + dice;  
+    
+
+    let section = document.querySelectorAll("section");
+
+
+    for(j=0; j<i; j++)
+        {
+    let p1 = document.getElementById("P1piece");
+    p1.remove();//removes the piece to be moved
+    
+    let node = section[j].getAttribute('id');    
+ 
+    let parentElem1 = document.querySelector(`#${node}`);
+        //test        
+        console.log(section);            
+        console.log(parentElem1);
+        console.log(node);
+    let newElem1 = document.createElement("img");
+    newElem1.setAttribute("src","./images/hat.jpg");
+    newElem1.setAttribute("id", "P1piece");    
     parentElem1.append(newElem1);
 
-    
-    let P1 = document.querySelector("P1piece");
+        }
 
-    //grid positioning of the piece
-    let row = parseInt(11); 
-    let col = parseInt(11);
-    //set property grid row and col
-    P1.style.setProperty("grid-row", `${row}/${row}`); 
-    P1.style.setProperty("grid-column", `${col}/${col}`);
 
 }
