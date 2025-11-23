@@ -24,10 +24,9 @@ onload = ()=> {
     layout();
     addPlayers();
     playerpiece();
-    //document.querySelector("#RollDice").onclick = diceroll;
-    //document.querySelector("#RollDice").onclick = movePlayer;
-    document.querySelector("#RollDice").onclick = PlayerTurn;
-
+    //document.querySelector("#RollDice").onclick = PlayerTurn;
+    //for test
+    document.querySelector("#RollDice").onclick = test;
 }
 
 function layout(){
@@ -318,17 +317,56 @@ function PlayerTurn(){
 
 }
 
-function rules(parentElem){
-    let tileSection = parentElem;    
-    let tile = tileSection.getAttribute("id");
+
+function rules(parentElem){//probably move up?
+       
+    let tile = parentElem.getAttribute("class");
     //test
     // console.log(`tile is ${parentElem}`);
     // console.log(`tile is ${tileSection}`);
-    // console.log(`id is ${tile}`);
-    switch(tile){
-        case "go":
+    console.log(`class is ${tile}`);
+    switch(`.${tile}`){
+        case ".corner go":
+        console.log("case go");
+        break;
+        case ".reg tax":
+        console.log("case tax");
+        break;
 
     }
 
 }
+
+function test(){
+
+    
+    
+    i1 = 5;    
+    let section = document.querySelectorAll("section");
+
+time = setTimeout(() => {
+for(j=0; j<i1; j++)
+    {  
+        let p1 = document.getElementById("P1piece");
+        p1.remove();//removes the piece to be moved        
+        let node = section[j].getAttribute('id');
+        //console.log(j);        
+        let parentElem1 = document.querySelector(`#${node}`);
+            //test        
+            // console.log(section);            
+            // console.log(parentElem1);
+            // console.log(node);            
+        let newElem1 = document.createElement("img");
+        newElem1.setAttribute("src","./images/hat.jpg");
+        newElem1.setAttribute("id", "P1piece");    
+        parentElem1.append(newElem1);
+
+        rules(parentElem1); //call method
+    }              
+}, 500);
+
+
+}
+
+
 
