@@ -25,6 +25,7 @@ onload = ()=> {
     addPlayers();
     playerpiece();
     //document.querySelector("#RollDice").onclick = diceroll;
+    //document.querySelector("#RollDice").onclick = movePlayer;
     document.querySelector("#RollDice").onclick = movePlayer;
 
 }
@@ -196,7 +197,7 @@ function addPlayers(){
     parentElem2.append(newElem2);
 }
 
-let i = 0;
+
 function playerpiece(){
     // put pieces on the "GO" tile
     //let parentElem1 = document.querySelector("#gameboard");
@@ -224,35 +225,46 @@ function playerpiece(){
     
 
 }
+let i = 0;
+let time = 0;
+function movePlayer(id, imgsrc){
 
-function movePlayer(){
+
     let dice = diceroll();
-    console.log(dice);
+    //console.log(dice);
     
     i = i + dice;  
     
-
     let section = document.querySelectorAll("section");
 
 
-    for(j=0; j<i; j++)
-        {
-    let p1 = document.getElementById("P1piece");
-    p1.remove();//removes the piece to be moved
+
+time = setTimeout(() => {
+for(j=0; j<i; j++)
+    {  
+        let p1 = document.getElementById("P1piece");
+        p1.remove();//removes the piece to be moved
+        
+        let node = section[j].getAttribute('id');
+        //console.log(j);    
     
-    let node = section[j].getAttribute('id');    
- 
-    let parentElem1 = document.querySelector(`#${node}`);
-        //test        
-        console.log(section);            
-        console.log(parentElem1);
-        console.log(node);
-    let newElem1 = document.createElement("img");
-    newElem1.setAttribute("src","./images/hat.jpg");
-    newElem1.setAttribute("id", "P1piece");    
-    parentElem1.append(newElem1);
+        let parentElem1 = document.querySelector(`#${node}`);
+            //test        
+            // console.log(section);            
+            // console.log(parentElem1);
+            // console.log(node);
+            
+        let newElem1 = document.createElement("img");
+        newElem1.setAttribute("src","./images/hat.jpg");
+        newElem1.setAttribute("id", "P1piece");    
+        parentElem1.append(newElem1);
+    }  
+            
+}, 500);
 
-        }
 
-
+        
+       
 }
+
+
