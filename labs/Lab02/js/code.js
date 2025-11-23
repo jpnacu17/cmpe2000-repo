@@ -26,7 +26,7 @@ onload = ()=> {
     playerpiece();
     //document.querySelector("#RollDice").onclick = diceroll;
     //document.querySelector("#RollDice").onclick = movePlayer;
-    document.querySelector("#RollDice").onclick = movePlayer;
+    document.querySelector("#RollDice").onclick = PlayerTurn;
 
 }
 
@@ -225,10 +225,10 @@ function playerpiece(){
     
 
 }
+
 let i = 0;
 let time = 0;
-function movePlayer(id, imgsrc){
-
+function movePlayer1(){
 
     let dice = diceroll();
     //console.log(dice);
@@ -236,7 +236,6 @@ function movePlayer(id, imgsrc){
     i = i + dice;  
     
     let section = document.querySelectorAll("section");
-
 
 
 time = setTimeout(() => {
@@ -262,9 +261,66 @@ for(j=0; j<i; j++)
             
 }, 500);
 
+       
+}
+
+function movePlayer2(){
+
+
+    let dice = diceroll();
+    console.log(dice);
+    
+    i = i + dice;  
+    
+    let section = document.querySelectorAll("section");
+
+time = setTimeout(() => {
+for(j=0; j<i; j++)
+    {  
+        let p2 = document.getElementById("P2piece");
+        p2.remove();//removes the piece to be moved
+        
+        let node = section[j].getAttribute('id');
+        //console.log(j);    
+    
+        let parentElem2 = document.querySelector(`#${node}`);
+            //test        
+            // console.log(section);            
+            // console.log(parentElem1);
+            // console.log(node);
+            
+        let newElem2 = document.createElement("img");
+        newElem2.setAttribute("src","./images/shoe.jpg");
+        newElem2.setAttribute("id", "P2piece");    
+        parentElem2.append(newElem2);
+    }  
+            
+}, 500);
+
 
         
        
 }
+
+let count = 0;
+function PlayerTurn(){
+    let player1 = document.querySelector("#p1")
+    let player2 = document.querySelector("#p2")
+    if(count % 2 == 0){
+        movePlayer1();
+        player2.style.setProperty("border","red dashed 2px");
+        player1.style.setProperty("border","");
+    }
+    else{
+        movePlayer2();
+        player1.style.setProperty("border","red dashed 2px");
+        player2.style.setProperty("border","");
+        
+    }
+    ++count;
+    console.log(count);
+
+}
+
 
 
