@@ -1,0 +1,116 @@
+body{
+    font-size: larger;
+}
+header{
+    background-color: white;
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+    padding:50px;
+    height: 20%;
+    margin:0;
+}
+.footer{
+    background-color:palegoldenrod;
+    /* height: 5%; */
+    text-align: center;   
+}
+
+
+button, input{
+    height:1fr;
+    width:95%; 
+    text-align: center;   
+}
+
+img{
+    height: 100px;
+    width: auto;
+} 
+
+#backgroundcolor, #dimensions{    
+    width: 20%;
+   
+}
+
+#colorbutton, #currentdimension{    
+    width: 40%;
+}
+/* img, #location{
+    height: 50px;
+    width: auto;
+} */
+
+p{
+    height:1fr;
+}
+
+#range, #columns, #rows{
+    width:40%;
+}
+
+
+
+/*adding desktop layout*/
+@media screen and ( min-width : 800px ) {
+/* Your desktop specifc styling here... */
+
+    body{
+        background-color: black;
+    }
+
+    #formbody{
+        display:grid;
+        
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: repeat(3, auto); 
+        
+        /* background-image: url(images/startrek.jpg); */
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+
+        height: 20%;
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 3;
+        grid-row-end: end; 
+    }
+
+    #form1{
+        background-color: gray;
+        grid-column-start: 2;
+        grid-column-end: 3;
+
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: 1fr, 1fr, 1fr, 1fr, auto; */
+        /* grid-gap:50px; */
+    }
+     p{
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+    } 
+    fieldset{
+        
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    #purchase{
+        grid-column-start: 1;
+        grid-column-end: end;
+        width: 100%;
+    }
+    select{
+        width:70%
+    }
+
+
+
+}

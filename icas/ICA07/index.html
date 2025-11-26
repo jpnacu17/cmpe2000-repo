@@ -6,55 +6,58 @@
     <title>ICA07</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/ica7javascript.js"></script>
 </head>
 <body>
+<header> ICA 07 </header>
+<div id="formbody">
+    <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
 
-<form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
+    <p>Make: </p>
+    <select name="brand" size="5">
+        <option value="">Please pick one</option>
+        <option class="makeclass" value="Honda">Japanese</option>
+        <option class="makeclass" value="Ducati">European</option>
+        <option class="makeclass" value="Harley">American</option>
+        
+        
+    </select>
+    <img id="motorcycle" src="images/AmericanNaked.jpg">
 
-<p>Make: </p>
-<select name="brand" size="5">
-    <option value="">Please pick one</option>
-    <option value="Honda">Japanese</option>
-    <option value="Ducati">European</option>
-    <option value="Harley">American</option>
-    
+    <p>Model: </p>
+    <fieldset>
+        <input class = "modelclass" type="radio" id="scooter" name="model" value="5000">Scooter
+        <!-- <label for="scooter">Scooter</label> -->
 
-</select>
+        <input class = "modelclass" type="radio" id="naked" name="model" value="10000">Naked
+        <!-- <label for="naked">Naked</label> -->
 
-<p>Model: </p>
-<fieldset>
-    <input type="radio" id="scooter" name="model" value="5000">
-    <label for="scooter">Scooter</label>
+        <input class = "modelclass" type="radio" id="track" name="model" value="15000">Track
+        <!-- <label for="track">Track</label> -->
+        
+    </fieldset>
 
-    <input type="radio" id="naked" name="model" value="5000">
-    <label for="naked">Naked</label>
+    <p>Options: </p>
+    <fieldset>
+        <input class = "optionsclass"  type="checkbox" id="scooter" name="ABS" value="300">
+        <label for="ABS">Aytomatic Braking System</label>
 
-    <input type="radio" id="track" name="model" value="5000">
-    <label for="track">Track</label>
-    
-</fieldset>
+        <input class = "optionsclass" type="checkbox" id="scooter" name="TCS" value="400">
+        <label for="TCS">Traction Control System</label>
 
-<p>Model: </p>
-<fieldset>
-    <input type="checkbox" id="scooter" name="ABS" value="300">
-    <label for="ABS">ABS</label>
+        <input class = "optionsclass" type="checkbox" id="scooter" name="FMM" value="5000">
+        <label for="FMM">F;ight Mode Mapping</label>
+        
+    </fieldset>
 
-    <input type="checkbox" id="scooter" name="TCS" value="400">
-    <label for="TCS">TCS</label>
+    <p>PrePayment: </p>
+    <input id="prepay" type="text">
 
-    <input type="checkbox" id="scooter" name="FMM" value="5000">
-    <label for="FMM">FMM</label>
-    
-</fieldset>
-
-<p>PrePayment: </p>
-<input type="text">
-
-<button type="submit">Purchase</button>
+    <button id="purchase" type="submit">Purchase</button>
 
 
-</form>
-
+    </form>
+</div>
 
     
 </body>
