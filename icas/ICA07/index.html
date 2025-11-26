@@ -15,10 +15,10 @@
 
     <p>Make: </p>
     <select name="brand" size="5">
-        <option value="">Please pick one</option>
-        <option class="makeclass" value="Honda">Japanese</option>
-        <option class="makeclass" value="Ducati">European</option>
-        <option class="makeclass" value="Harley">American</option>
+        <option name="Please Pick One" value="">Please pick one</option>
+        <option class="makeclass" name="Japanese" value="Honda">Japanese</option>
+        <option class="makeclass" name="European" value="Ducati">European</option>
+        <option class="makeclass" name="American" value="Harley">American</option>
         
         
     </select>
@@ -26,13 +26,13 @@
 
     <p>Model: </p>
     <fieldset>
-        <input class = "modelclass" type="radio" id="scooter" name="model" value="5000">Scooter
+        <input class = "modelclass" type="radio" name="scooter" value="5000">Scooter
         <!-- <label for="scooter">Scooter</label> -->
 
-        <input class = "modelclass" type="radio" id="naked" name="model" value="10000">Naked
+        <input class = "modelclass" type="radio" name="naked"  value="10000">Naked
         <!-- <label for="naked">Naked</label> -->
 
-        <input class = "modelclass" type="radio" id="track" name="model" value="15000">Track
+        <input class = "modelclass" type="radio" name="track"  value="15000">Track
         <!-- <label for="track">Track</label> -->
         
     </fieldset>
@@ -46,14 +46,14 @@
         <label for="TCS">Traction Control System</label>
 
         <input class = "optionsclass" type="checkbox" id="scooter" name="FMM" value="5000">
-        <label for="FMM">F;ight Mode Mapping</label>
+        <label for="FMM">Flight Mode Mapping</label>
         
     </fieldset>
 
     <p>PrePayment: </p>
     <input id="prepay" type="text">
 
-    <button id="purchase" type="submit">Purchase</button>
+    <button id="purchase" name="down_payment" type="submit">Purchase</button>
 
 
     </form>
