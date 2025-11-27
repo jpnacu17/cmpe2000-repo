@@ -14,7 +14,7 @@
     <form id="form1" action="https://thor.cnt.sast.ca/~demo/cmpe2000/ica04_formtest.php" method ="post" target ="_blank">
 
     <p>Make: </p>
-    <select name="brand" size="5">
+    <select name="brand" id="makeid" size="5">
         <option name="Please Pick One" value="">Please pick one</option>
         <option class="makeclass" name="Japanese" value="Honda">Japanese</option>
         <option class="makeclass" name="European" value="Ducati">European</option>
@@ -25,27 +25,27 @@
     <img id="motorcycle" src="images/AmericanNaked.jpg">
 
     <p>Model: </p>
-    <fieldset>
-        <input class = "modelclass" type="radio" name="scooter" value="5000">Scooter
+    <fieldset id="modelid">
+        <input type="radio" class = "modelclass"  name="scooter" value="5000">Scooter
         <!-- <label for="scooter">Scooter</label> -->
 
-        <input class = "modelclass" type="radio" name="naked"  value="10000">Naked
+        <input type="radio" class = "modelclass" name="naked"  value="10000">Naked
         <!-- <label for="naked">Naked</label> -->
 
-        <input class = "modelclass" type="radio" name="track"  value="15000">Track
+        <input type="radio" class = "modelclass"  name="track"  value="15000">Track
         <!-- <label for="track">Track</label> -->
         
     </fieldset>
 
     <p>Options: </p>
     <fieldset>
-        <input class = "optionsclass"  type="checkbox" id="scooter" name="ABS" value="300">
+        <input class = "optionsclass"  type="checkbox"  name="ABS" value="300">
         <label for="ABS">Aytomatic Braking System</label>
 
-        <input class = "optionsclass" type="checkbox" id="scooter" name="TCS" value="400">
+        <input class = "optionsclass" type="checkbox"  name="TCS" value="400">
         <label for="TCS">Traction Control System</label>
 
-        <input class = "optionsclass" type="checkbox" id="scooter" name="FMM" value="5000">
+        <input class = "optionsclass" type="checkbox"  name="FMM" value="5000">
         <label for="FMM">Flight Mode Mapping</label>
         
     </fieldset>
@@ -54,8 +54,11 @@
     <input id="prepay" type="text">
 
     <button id="purchase" name="down_payment" type="submit">Purchase</button>
-
-
+    
+    
+    <!-- test -->
+    <div id="display"></div>
+    <button id="test" type="button">TEST</button>
     </form>
 </div>
 
