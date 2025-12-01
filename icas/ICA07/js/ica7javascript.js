@@ -9,11 +9,11 @@ document.querySelector("#test").onclick = UpdateModel;
 document.querySelectorAll(".modelclass").forEach((element)=>{
     element.onclick = UpdateModel
 
-    //validate function: binding the onsubmit event to the form
-    document.querySelector("form").onsubmit = validation;
+  
     
 })
-
+  //validate function: binding the onsubmit event to the form
+    document.querySelector("form").onsubmit = validation;
 }
 //step 1
 function UpdateMake(){
@@ -59,7 +59,9 @@ check[i].checked = false;
 function validation(){
     // let make = document.querySelectorAll(".makeclass");
     // console.log(make);
-    alert("validate error")
+    alert("validate error");
+
+   
     return false;
 
 }
