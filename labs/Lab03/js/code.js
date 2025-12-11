@@ -25,8 +25,8 @@ $(document).ready(()=>{
     playerpiece();
     money();
 
-    $("#RollDice").click(movePlayer1);
-    //$("#RollDice").click(PlayerTurn);
+    //$("#RollDice").click(movePlayer1);
+    $("#RollDice").click(PlayerTurn);
 
 })
 
@@ -216,8 +216,8 @@ function playerpiece(){
     let i2 = 1;
 function movePlayer1(){
 
-    //let dice = diceroll();
-    let dice = 40;//test
+    let dice = diceroll();
+    //let dice = 40;//test
     //console.log("diceroll: " + dice);
     
     i1 = (i1 + dice);    
@@ -239,22 +239,20 @@ for(j=1; j<i1; j++)
         //console.log("j= " + j); 
         //let go = $("#go");
 
-        if((j %= 40)==0){
-            alert("looped around");
-            i1 = 0;
+        // if((j %= 40)==0){
+        //     alert("looped around");
+        //     i1 = 0;
             
-        }
+        // }
 
-        if(j == i1-2 || move == "go"){ // if the piece is on a tile based on the number of the dice roll OR
-                                        // if the piece passes by "go"
-        //console.log("move: " + move);//hopefully reads the current tile
-        rules(move); //call method
-        }
+        // if(j == i1-2 || move == "go"){ // if the piece is on a tile based on the number of the dice roll OR
+        //                                 // if the piece passes by "go"
+        // //console.log("move: " + move);//hopefully reads the current tile
+        // rules(move); //call method
+        // }
     }              
 
 }, 500);
-
-
 
 
     
@@ -285,8 +283,8 @@ for(j=0; j<i2; j++)
        
 }
 
-    let count = 0;
 
+let count = 0;
 function PlayerTurn(){
     let player1 = $("#p1")
     let player2 = $("#p2")
@@ -332,10 +330,11 @@ function rules(move){
      console.log(`tile is ${tile}`);
     // console.log(`tile is ${tileSection}`);
     console.log(`class is ${tile}`);
+
     switch(tile){
         case "corner go":
         // alert("case go");
-        amountP1 = amountP1 + 200; // add $500 everytime the piece passes or lands on "go"
+        amountP1 = amountP1 + 200; // add $200 everytime the piece passes or lands on "go"
          $("#player1amt").html("$"+ amountP1); //update money
 
         alert("amount is " + amountP1);
