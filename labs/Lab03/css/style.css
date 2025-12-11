@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+#gameboard{
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 2fr repeat(9, 1fr) 2fr;
+    grid-template-columns: 2fr repeat(9, 1fr) 2fr;
+    text-align : center;
+}
+
+section{
+    border: 1px solid black;
+    height: 100px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+section {
+    border: black 2px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: small;
+	box-sizing : border-box;
+}
+
+.middle {
+    grid-column: 2/11;
+    grid-row: 2/11;
+}
+
+.lightblue.top {
+    border-top: lightblue 30px solid;
+   
+}
+
+.brown.top {
+    border-top: brown 30px solid;
+    
+}
+
+.purple.right {
+    border-right: purple 30px solid;
+}
+
+.orange.right {
+    border-right: orange 30px solid;
+}
+
+.red.bottom {
+    border-bottom: red 30px solid;
+  
+}
+
+.yellow.bottom {
+    border-bottom: yellow 30px solid;
+    
+}
+
+.green.left {
+    border-left: green 30px solid;
+}
+
+.blue.left {
+    border-left: blue 30px solid;
+}
+
+header {
+    font-size: 36pt;
+    background-color: lightskyblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+aside .buffer {
+    margin-top: 100px;
+
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#player1div, .p1 {
+    background-color: lightgreen;
+}
+
+#player2div, .p2 {
+    background-color: violet;
+}
+
+.active {
+    border: 5px dotted red;
+}
+
+.die {
+    width: 60px;
+    height: 60px;
+}
+
+figure {
+    display: inline;
+}
+
+.amount {
+    background-color: green;
+    border: grey 2px solid;
+    font-size: 14pt;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
