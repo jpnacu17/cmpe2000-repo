@@ -18,22 +18,15 @@ const takeAChanceMoney = [
     -100
 ]
 
-// const i = 0; //position of piece
-//windows onload
-    // onload = ()=> {
-    //     layout();
-    //     addPlayers();
-    //     playerpiece();
-    //     //$("#RollDice").onclick = PlayerTurn;
-    //     //for test
-    //     //$("#RollDice").onclick = test;
-    // }
+
 $(document).ready(()=>{
     layout();
     addPlayers();
     playerpiece();
+    money();
 
-    $("#RollDice").click(diceroll);
+    $("#RollDice").click(movePlayer1);
+    //$("#RollDice").click(PlayerTurn);
 
 })
 
@@ -200,24 +193,9 @@ function diceroll(){
 
 
 function addPlayers(){
-        // let parentElem1 = $("#player1");
-        // let newElem1 = document.createElement("img");
-        // newElem1.attr("src","./images/hat.jpg");
-        // newElem1.attr("id", "p1");
-        // parentElem1.append(newElem1);
 
-        // let parentElem2 = $("#player2");
-        // let newElem2 = document.createElement("img");
-        // newElem2.attr("src","./images/shoe.jpg");
-        // newElem2.attr("id", "p2");
-        // parentElem2.append(newElem2);
-
-
-     $("#player1").html(`<img id="p1" src="./images/hat.jpg">`); 
-     $("#player2").html(`<img id="p2" src="./images/shoe.jpg">`); 
-
-
-
+$("#player1").html(`<img id="p1" src="./images/hat.jpg">`); 
+$("#player2").html(`<img id="p2" src="./images/shoe.jpg">`); 
 }
 
 
@@ -230,68 +208,58 @@ function playerpiece(){
     $("#" + start).append(`<img id="p1Piece" src="./images/hat.jpg">`); 
     $("#" + start).append(`<img id="p2Piece" src="./images/shoe.jpg">`); 
 
-    // let parentElem1 = $(`#${node}`);
-    // let parentElem2 = $(`#${node}`);
-    //test        
-    // console.log(section);            
-    // console.log(parentElem1);
-    // console.log(node);
-    // let newElem1 = document.createElement("img");
-    // newElem1.attr("src","./images/hat.jpg");
-    // newElem1.attr("id", "P1piece");    
-    // parentElem1.append(newElem1);        
-    // let newElem2 = document.createElement("img");
-    // newElem2.attr("src","./images/shoe.jpg");
-    // newElem2.attr("id", "P2piece");    
-    // parentElem2.append(newElem2); 
-
-    //console.log("#" + start);
-    
-
 }
 
 
     let time = 0;
-    let i1 = 1;
+    let i1 = 1; //check values
     let i2 = 1;
 function movePlayer1(){
 
-    let dice = diceroll();
-    //console.log(dice);
+    //let dice = diceroll();
+    let dice = 40;//test
+    //console.log("diceroll: " + dice);
     
     i1 = (i1 + dice);    
+    //console.log("i1: " + i1);
+
     let section = $("section");
 
 time = setTimeout(() => {
-for(j=0; j<i1; j++)
+for(j=1; j<i1; j++)
     {  
 
         $("#p1Piece").remove(); //removes piece
 
+        //adds the piece based on "j", which corresponds to the tile and the dice rolled
         let section = $("section");  
         let move = $(section[j]).attr("id");  
         $("#" + move).append(`<img id="p1Piece" src="./images/hat.jpg">`); 
-        $("#" + move).append(`<img id="p2Piece" src="./images/shoe.jpg">`); 
 
-        // let p1 = document.getElementById("P1piece");
-        // p1.remove();//removes the piece to be moved        
-        // let node = section[j].getAttribute('id');
-        // //console.log(j);        
-        // let parentElem1 = $(`#${node}`);           
-        // let newElem1 = document.createElement("img");
-        // newElem1.attr("src","./images/hat.jpg");
-        // newElem1.attr("id", "P1piece");    
-        // parentElem1.append(newElem1);
+        //console.log("j= " + j); 
+        //let go = $("#go");
 
-        
+        if((j %= 40)==0){
+            alert("looped around");
+            i1 = 0;
+            
+        }
 
-
-        rules(parentElem1); //call method
+        if(j == i1-2 || move == "go"){ // if the piece is on a tile based on the number of the dice roll OR
+                                        // if the piece passes by "go"
+        //console.log("move: " + move);//hopefully reads the current tile
+        rules(move); //call method
+        }
     }              
+
 }, 500);
+
+
+
+
     
 }
-/*
+
 function movePlayer2(){
 
 
@@ -305,22 +273,12 @@ function movePlayer2(){
 time = setTimeout(() => {
 for(j=0; j<i2; j++)
     {  
-        let p2 = document.getElementById("P2piece");
-        p2.remove();//removes the piece to be moved
-        
-        let node = section[j].getAttribute('id');
-        //console.log(j);    
-    
-        let parentElem2 = $(`#${node}`);
-            //test        
-            // console.log(section);            
-            // console.log(parentElem1);
-            // console.log(node);
-            
-        let newElem2 = document.createElement("img");
-        newElem2.attr("src","./images/shoe.jpg");
-        newElem2.attr("id", "P2piece");    
-        parentElem2.append(newElem2);
+        $("#p2Piece").remove(); //removes piece
+
+        //adds the piece based on "j", which corresponds to the tile and the dice rolled
+        let section = $("section");  
+        let move = $(section[j]).attr("id");  
+        $("#" + move).append(`<img id="p2Piece" src="./images/shoe.jpg">`); 
     }  
             
 }, 500);        
@@ -334,13 +292,13 @@ function PlayerTurn(){
     let player2 = $("#p2")
     if(count % 2 == 0){
         movePlayer1();
-        player2.style.setProperty("border","red dashed 2px");
-        player1.style.setProperty("border","");
+        player2.css("border","red dashed 2px");
+        player1.css("border","");
     }
     else{
         movePlayer2();
-        player1.style.setProperty("border","red dashed 2px");
-        player2.style.setProperty("border","");
+        player1.css("border","red dashed 2px");
+        player2.css("border","");
         
     }
     ++count;
@@ -348,56 +306,48 @@ function PlayerTurn(){
 
 }
 
+let amountP1 = 3000;
+let amountP2 = 3000;
 
-function rules(parentElem){//probably move up?
-       
-    let tile = parentElem.getAttribute("class");
+function money(){
+    // $("#player1amt").attr("val", amountP1);
+    // let valuep1 =  $("#player1amt").attr("val");
+    //console.log(amountP1);
+    $("#player1amt").html("$"+ amountP1);
+
+    // $("#player1amt").attr("val", "3000");
+    // let valuep2 =  $("#player1amt").attr("val");
+    $("#player2amt").html("$"+ amountP2);
+    
+}
+
+function rules(move){
+    //console.log("move: " + move);
+    let tile = $("#" + move).attr("class");
+    //let tile = $("#" + move).val();
+
+    let tileVal = $("#" + move).attr("val");
+    
     //test
-    // console.log(`tile is ${parentElem}`);
+     console.log(`tile is ${tile}`);
     // console.log(`tile is ${tileSection}`);
     console.log(`class is ${tile}`);
-    switch(`.${tile}`){
-        case ".corner go":
-        console.log("case go");
+    switch(tile){
+        case "corner go":
+        // alert("case go");
+        amountP1 = amountP1 + 200; // add $500 everytime the piece passes or lands on "go"
+         $("#player1amt").html("$"+ amountP1); //update money
+
+        alert("amount is " + amountP1);
+
         break;
-        case ".reg tax":
-        console.log("case tax");
+        case "reg tax":
+        alert("case tax");
         break;
 
     }
 
 }
 
-function test(){
 
-    
-    
-    i1 = 5;    
-    let section = $("section");
-
-time = setTimeout(() => {
-for(j=0; j<i1; j++)
-    {  
-        let p1 = document.getElementById("P1piece");
-        p1.remove();//removes the piece to be moved        
-        let node = section[j].getAttribute('id');
-        //console.log(j);        
-        let parentElem1 = $(`#${node}`);
-            //test        
-            // console.log(section);            
-            // console.log(parentElem1);
-            // console.log(node);            
-        let newElem1 = document.createElement("img");
-        newElem1.attr("src","./images/hat.jpg");
-        newElem1.attr("id", "P1piece");    
-        parentElem1.append(newElem1);
-
-        rules(parentElem1); //call method
-    }              
-}, 500);
-
-
-}
-
-*/
 
