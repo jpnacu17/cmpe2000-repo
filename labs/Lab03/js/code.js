@@ -20,15 +20,55 @@ const takeAChanceMoney = [
 
 
 $(document).ready(()=>{
+    //ajax propertyrpices
+    //callAjax("https://thor.cnt.sast.ca/~aulakhha/filesAssLab/lab3.php",{"action": "propertyPrices"},"POST", JSON, handleTest, handleTestError);
+    //ajax dice roll
+
+    $("#RollDice").click( ()=>{
+   callAjax("https://thor.cnt.sast.ca/~aulakhha/filesAssLab/lab3.php",{"action": "diceroll"},"POST", 'json', handleTestDice, handleTestError);
+    });
+
     layout();
     addPlayers();
     playerpiece();
     money();
 
-    //$("#RollDice").click(movePlayer1);
-    $("#RollDice").click(PlayerTurn);
+    //$("#RollDice").click(diceAjax);
+    //$("#RollDice").click(PlayerTurn);
 
 })
+
+function callAjax(url, data, type, dataType, successCallback, errorCallback){
+    let options = {}
+
+    options['url'] = url;
+    options['data'] = data;
+    options['type'] = type;
+    options['dataType'] = dataType;
+    options['success'] = successCallback;
+    options['error'] = errorCallback;
+    
+
+
+    $.ajax(options);
+}
+
+//functions to handle tests if the ajax call was successful or not
+function handleTestError(data) {
+    console.log("error:" + data)
+}
+function handleTest(data) {
+    console.log(data)
+}
+function handleTestDice(data) {
+    console.log(data.dice1)
+    console.log(data.dice2)
+
+    //call dice roll method?
+    //diceroll(data.dice1, data.dice2);
+    PlayerTurn(data.dice1, data.dice2);
+}
+
 
 
 function layout(){
@@ -84,24 +124,25 @@ function layout(){
 }
 
     
-function diceroll(){    
-   
+function diceroll(dice1, dice2){    
+   //ajax bit
+       //let diceAjax = "result" + callAjax("https://thor.cnt.sast.ca/~aulakhha/filesAssLab/lab3.php",{"action": "diceroll"},"POST", 'json', handleTest, handleTestError);
+
+        //console.log(diceAjax)
+    /*
     //randomize dice
     let rand1 = Math.floor((Math.random() * 6) + 1); //dice range from 1 to 6
     let rand2 = Math.floor((Math.random() * 6) + 1);
-    //let die = $All(".die");
+    */
+
     let die = $(".die");
     console.log(die);
     
 
-    //test
-    //alert("rand number is "+ rand);
-    // console.log(die);
-    // console.log(rand1);
-    // console.log(rand2);
+   
 
     //for dice 1
-    switch(rand1){ // each case represent the dice value
+    switch(dice1){ // each case represent the dice value
         case 1:
             $(die[0]).attr("src", "./images/dice1.jpg");
             //$(die[1]).attr ("src", "./images/dice1..jpg");
@@ -141,7 +182,7 @@ function diceroll(){
     }
 
     //for dice 2
-    switch(rand2){ // each case represent the dice value
+    switch(dice2){ // each case represent the dice value
         case 1:
             //$(die[0]).attr ("src", "./images/dice1..jpg");
             $(die[1]).attr ("src", "./images/dice1.jpg");
@@ -183,12 +224,14 @@ function diceroll(){
         
     }
 
-    let dice = rand1 + rand2;
+    //let dice = rand1 + rand2;
+    let dice = dice1 + dice2;
     console.log(dice);
     
-    return rand1 + rand2;
+    //return rand1 + rand2;
+    return dice;
     //test
-
+    
 }
 
 
@@ -214,9 +257,9 @@ function playerpiece(){
     let time = 0;
     let i1 = 1; //check values
     let i2 = 1;
-function movePlayer1(){
+function movePlayer1(dice1, dice2){
 
-    let dice = diceroll();
+    let dice = diceroll(dice1,dice2);
     //let dice = 40;//test
     //console.log("diceroll: " + dice);
     
@@ -258,10 +301,10 @@ for(j=1; j<i1; j++)
     
 }
 
-function movePlayer2(){
+function movePlayer2(dice1, dice2){
 
 
-    let dice = diceroll();
+    let dice = diceroll(dice1, dice2);
     console.log(dice);
     
     i2 = (i2 + dice);  
@@ -285,22 +328,22 @@ for(j=0; j<i2; j++)
 
 
 let count = 0;
-function PlayerTurn(){
+function PlayerTurn(dice1, dice2){
     let player1 = $("#p1")
     let player2 = $("#p2")
     if(count % 2 == 0){
-        movePlayer1();
+        movePlayer1(dice1, dice2);
         player2.css("border","red dashed 2px");
         player1.css("border","");
     }
     else{
-        movePlayer2();
+        movePlayer2(dice1, dice2);
         player1.css("border","red dashed 2px");
         player2.css("border","");
         
     }
     ++count;
-    console.log(count);
+    //console.log(count);
 
 }
 
